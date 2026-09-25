@@ -48,6 +48,57 @@
         </p>
     </section>
 
+
+        <section id="loading-state" aria-label="Loading projects">
+        <h2>Loading Projects</h2>
+
+        <article class="skeleton-card" aria-hidden="true">
+            <span class="skeleton skeleton-title"></span>
+            <span class="skeleton skeleton-text"></span>
+            <span class="skeleton skeleton-text"></span>
+        </article>
+    </section>
+
+
+    <section id="live-data-state" aria-label="Live project data">
+    <h2>My Projects</h2>
+
+    <article class="project-card">
+        <h3>Web Application Project</h3>
+
+        <p>
+            A web application project developed as part of
+            Web Application Development.
+        </p>
+
+        <p>
+            <strong>Tags:</strong> HTML, CSS, JavaScript
+        </p>
+
+        <a href="#contact">View Project</a>
+    </article>
+</section>
+
+
+<!-- T-03C: Empty State -->
+<section id="empty-state" aria-label="Empty project state">
+    <h2>No Projects Available</h2>
+    <p>There are currently no projects to display.</p>
+</section>
+
+<!-- T-03C: Error State -->
+<section id="error-state" aria-label="Project loading error">
+    <h2>Unable to Load Projects</h2>
+
+    <p id="error-message" role="alert">
+        Something went wrong while loading the projects.
+    </p>
+
+    <button type="button" id="retry-button">
+        Retry
+    </button>
+</section>
+
     <section id="skills">
         <h2>Skills</h2>
 
