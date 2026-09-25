@@ -38,3 +38,9 @@ contactForm.addEventListener("submit", (event) => {
     formStatus.textContent = "Message sent successfully.";
     contactForm.reset();
 });
+
+const retryButton = document.getElementById("retry-button");
+
+retryButton.addEventListener("click", () => {
+    window.location.reload();
+});
