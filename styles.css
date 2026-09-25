@@ -74,3 +74,65 @@ main {
     gap: var(--spacing-lg);
     padding: var(--spacing-lg);
 }
+/* Portfolio Components */
+
+#hero,
+#skills,
+#projects,
+#contact {
+    padding: var(--spacing-lg);
+}
+
+#hero img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.skills-grid span {
+    padding: var(--spacing-sm);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.project-card {
+    padding: var(--spacing-md);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+#contact-form {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font: inherit;
+}
+
+#contact-form button {
+    width: fit-content;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+}
