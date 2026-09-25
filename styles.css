@@ -1,0 +1,51 @@
+/* CSS Tokens */
+:root {
+    --color-primary: #2563eb;
+    --color-background: #ffffff;
+    --color-text: #1f2937;
+    --color-surface: #f3f4f6;
+    --color-border: #d1d5db;
+
+    --font-family: Arial, sans-serif;
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+p,
+ul {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+a {
+    color: var(--color-primary);
+}
