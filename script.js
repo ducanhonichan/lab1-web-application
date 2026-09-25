@@ -29,3 +29,12 @@ themeToggle.addEventListener("click", () => {
         themeToggle.setAttribute("aria-label", "Switch to light mode");
     }
 });
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    formStatus.textContent = "Message sent successfully.";
+    contactForm.reset();
+});
