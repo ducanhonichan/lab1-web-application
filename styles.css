@@ -202,3 +202,13 @@ main {
     color: var(--color-on-primary);
     cursor: pointer;
 }
+
+/* T-03: State visibility */
+
+[data-state] {
+    display: block;
+}
+
+[data-state][hidden] {
+    display: none;
+}

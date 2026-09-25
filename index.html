@@ -49,7 +49,7 @@
     </section>
 
 
-        <section id="loading-state" aria-label="Loading projects">
+        <section id="loading-state" data-state="loading" aria-label="Loading projects">
         <h2>Loading Projects</h2>
 
         <article class="skeleton-card" aria-hidden="true">
@@ -60,7 +60,7 @@
     </section>
 
 
-    <section id="live-data-state" aria-label="Live project data">
+    <section id="live-data-state" data-state="live" aria-label="Live project data" hidden>
     <h2>My Projects</h2>
 
     <article class="project-card">
@@ -81,13 +81,13 @@
 
 
 <!-- T-03C: Empty State -->
-<section id="empty-state" aria-label="Empty project state">
+<section id="empty-state" data-state="empty" aria-label="Empty project state" hidden>
     <h2>No Projects Available</h2>
     <p>There are currently no projects to display.</p>
 </section>
 
 <!-- T-03C: Error State -->
-<section id="error-state" aria-label="Project loading error">
+<section id="error-state" data-state="error" aria-label="Project loading error" hidden>
     <h2>Unable to Load Projects</h2>
 
     <p id="error-message" role="alert">

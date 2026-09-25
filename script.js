@@ -41,6 +41,36 @@ contactForm.addEventListener("submit", (event) => {
 
 const retryButton = document.getElementById("retry-button");
 
+
+
+// T-03: Resilient Component State Machine
+
+const projectStates = {
+    loading: document.getElementById("loading-state"),
+    live: document.getElementById("live-data-state"),
+    empty: document.getElementById("empty-state"),
+    error: document.getElementById("error-state")
+};
+
+function showProjectState(state) {
+    Object.entries(projectStates).forEach(([name, element]) => {
+        element.hidden = name !== state;
+    });
+}
+
+// Start with Loading state
+showProjectState("loading");
+
+// Simulate loading data
+setTimeout(() => {
+    showProjectState("live");
+}, 1000);
+
+// Retry returns to Loading, then Live Data
 retryButton.addEventListener("click", () => {
-    window.location.reload();
+    showProjectState("loading");
+
+    setTimeout(() => {
+        showProjectState("live");
+    }, 1000);
 });
