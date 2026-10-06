@@ -32,6 +32,15 @@ themeToggle.addEventListener("click", () => {
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
+const formStates = {
+    idle: "idle",
+    submitting: "submitting",
+    success: "success",
+    error: "error"
+};
+
+let currentFormState = formStates.idle;
+
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
