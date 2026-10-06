@@ -50,6 +50,13 @@ ul {
 a {
     color: var(--color-primary);
 }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
 /* Dark Theme */
 [data-theme="dark"] {
     --color-background: #111827;
