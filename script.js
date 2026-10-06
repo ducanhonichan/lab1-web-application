@@ -44,8 +44,17 @@ let currentFormState = formStates.idle;
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    formStatus.textContent = "Message sent successfully.";
-    contactForm.reset();
+    currentFormState = formStates.submitting;
+    formStatus.textContent = "Submitting...";
+    contactForm.querySelector("button[type='submit']").disabled = true;
+
+    setTimeout(() => {
+        currentFormState = formStates.success;
+        formStatus.textContent = "Message sent successfully.";
+
+        contactForm.reset();
+        contactForm.querySelector("button[type='submit']").disabled = false;
+    }, 1000);
 });
 
 const retryButton = document.getElementById("retry-button");
