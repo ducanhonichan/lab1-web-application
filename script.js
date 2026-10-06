@@ -107,3 +107,34 @@ window.addEventListener("keydown", (event) => {
         timestamp: Date.now()
     });
 });
+
+// HW3 Slice 1: Drift-Free Countdown Engine
+
+const countdownDisplay = document.getElementById("countdown-display");
+
+const targetTime = new Date(
+    "2026-12-31T23:59:59Z"
+).getTime();
+
+function updateCountdown() {
+    const remaining = targetTime - Date.now();
+
+    if (remaining <= 0) {
+        countdownDisplay.textContent = "Countdown finished.";
+        return;
+    }
+
+    const totalSeconds = Math.floor(remaining / 1000);
+
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    countdownDisplay.textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
