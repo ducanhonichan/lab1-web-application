@@ -44,6 +44,10 @@ let currentFormState = formStates.idle;
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    if (currentFormState === formStates.submitting) {
+        return;
+}
+
     currentFormState = formStates.submitting;
     formStatus.textContent = "Submitting...";
     contactForm.querySelector("button[type='submit']").disabled = true;
