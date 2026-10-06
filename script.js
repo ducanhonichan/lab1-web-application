@@ -91,3 +91,9 @@ function playSound(key) {
         pad.classList.remove("active");
     }, 100);
 }
+
+window.addEventListener("keydown", (event) => {
+    if (event.repeat) return;
+
+    playSound(event.key);
+});
