@@ -70,12 +70,19 @@ const message = sanitizeInput(
     contactForm.querySelector("button[type='submit']").disabled = true;
 
     setTimeout(() => {
+    const isSuccess = true;
+
+    if (isSuccess) {
         currentFormState = formStates.success;
         formStatus.textContent = "Message sent successfully.";
-
         contactForm.reset();
-        contactForm.querySelector("button[type='submit']").disabled = false;
-    }, 1000);
+    } else {
+        currentFormState = formStates.error;
+        formStatus.textContent = "Failed to send message. Please try again.";
+    }
+
+    contactForm.querySelector("button[type='submit']").disabled = false;
+}, 1000);
 });
 
 const retryButton = document.getElementById("retry-button");
