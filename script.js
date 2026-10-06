@@ -92,8 +92,18 @@ function playSound(key) {
     }, 100);
 }
 
+
+const beatQueue = [];
+
 window.addEventListener("keydown", (event) => {
     if (event.repeat) return;
 
-    playSound(event.key);
+    const key = event.key.toLowerCase();
+
+    playSound(key);
+
+    beatQueue.push({
+        key: key,
+        timestamp: Date.now()
+    });
 });
