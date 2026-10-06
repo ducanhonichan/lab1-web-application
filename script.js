@@ -41,8 +41,25 @@ const formStates = {
 
 let currentFormState = formStates.idle;
 
+
+
+function sanitizeInput(value) {
+    return value.trim().replace(/[<>]/g, "");
+}
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const name = sanitizeInput(
+    document.getElementById("name").value
+);
+
+const email = sanitizeInput(
+    document.getElementById("email").value
+);
+
+const message = sanitizeInput(
+    document.getElementById("message").value
+);
 
     if (currentFormState === formStates.submitting) {
         return;
